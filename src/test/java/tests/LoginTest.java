@@ -1,8 +1,9 @@
 package tests;
 
 import io.qameta.allure.junit4.DisplayName;
+import io.qameta.allure.Description;
 import org.junit.Test;
-import pageObject.*;
+import pages.*;
 import static config.Constants.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -11,6 +12,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     @DisplayName("Вход через кнопку «Личный кабинет»")
+    @Description("Проверка успешного входа в систему при нажатии на кнопку 'Личный кабинет' на главной странице")
     public void loginThroughAccountButtonSuccess() {
         // Открываем главную страницу
         driver.get(MAIN_PAGE_URL);
@@ -42,6 +44,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     @DisplayName("Вход по кнопке «Войти в аккаунт» на главной")
+    @Description("Проверка успешного входа через кнопку 'Войти в аккаунт' на главной странице")
     public void registerAccountButtonSuccess() {
         // Открываем главную страницу
         driver.get(MAIN_PAGE_URL);
@@ -65,6 +68,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     @DisplayName("Вход через кнопку в форме регистрации")
+    @Description("Проверка перехода на страницу входа из формы регистрации и успешной авторизации")
     public void registerRegisterPageSuccess() {
         // Открываем страницу регистрации
         driver.get(REGISTER_PAGE_URL);
@@ -91,6 +95,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     @DisplayName("Вход через кнопку в форме восстановления пароля")
+    @Description("Проверка перехода на страницу входа со страницы восстановления пароля и успешной авторизации")
     public void registerRecoverPasswordPageSuccess() {
         // Открываем страницу восстановления пароля
         driver.get(FORGOT_PASSWORD_PAGE_URL);

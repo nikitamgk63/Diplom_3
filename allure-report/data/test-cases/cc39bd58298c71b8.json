@@ -1,0 +1,345 @@
+{
+  "uid" : "cc39bd58298c71b8",
+  "name" : "Вход по кнопке «Войти в аккаунт» на главной",
+  "fullName" : "tests.LoginTest.registerAccountButtonSuccess",
+  "historyId" : "4f3c5432700add6a1df54260b17f6cb9",
+  "time" : {
+    "start" : 1745438365179,
+    "stop" : 1745438373268,
+    "duration" : 8089
+  },
+  "description" : "Проверка успешного входа через кнопку 'Войти в аккаунт' на главной странице",
+  "descriptionHtml" : "<p>Проверка успешного входа через кнопку 'Войти в аккаунт' на главной странице</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Проверка успешного входа через кнопку 'Войти в аккаунт' на главной странице",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Подготовка тестового пользователя через API",
+      "time" : {
+        "start" : 1745438366118,
+        "stop" : 1745438366650,
+        "duration" : 532
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Создание нового пользователя",
+        "time" : {
+          "start" : 1745438366119,
+          "stop" : 1745438366346,
+          "duration" : 227
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "user",
+          "value" : "User(email=noezemlak1745438366118@yahoo.com, password=^hu79FL^1d, name=Ylml Yipg, token=null)"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Вход под пользователем",
+        "time" : {
+          "start" : 1745438366379,
+          "stop" : 1745438366620,
+          "duration" : 241
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "user",
+          "value" : "User(email=noezemlak1745438366118@yahoo.com, password=^hu79FL^1d, name=Ylml Yipg, token=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDk0NjlkOWVkMjgwMDAxYjVkM2UxYSIsImlhdCI6MTc0NTQzODM2NSwiZXhwIjoxNzQ1NDM5NTY1fQ.S8E_2plw09hJzGnOSptbQQ44yhtYD0b_tlgWH27sNoo)"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Клик на кнопку «Личный кабинет» и переход на страницу авторизации",
+      "time" : {
+        "start" : 1745438371434,
+        "stop" : 1745438371544,
+        "duration" : 110
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Клик по элементу: By.xpath: //p[contains(text(),'Личный Кабинет')]",
+        "time" : {
+          "start" : 1745438371434,
+          "stop" : 1745438371544,
+          "duration" : 110
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Ожидание видимости элемента: By.xpath: //p[contains(text(),'Личный Кабинет')]",
+          "time" : {
+            "start" : 1745438371434,
+            "stop" : 1745438371465,
+            "duration" : 31
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "By.xpath: //p[contains(text(),'Личный Кабинет')]"
+          } ],
+          "stepsCount" : 0,
+          "hasContent" : true,
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "By.xpath: //p[contains(text(),'Личный Кабинет')]"
+        } ],
+        "stepsCount" : 1,
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Вход через форму логина",
+      "time" : {
+        "start" : 1745438371544,
+        "stop" : 1745438372396,
+        "duration" : 852
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Заполняем поле Email",
+        "time" : {
+          "start" : 1745438371544,
+          "stop" : 1745438371678,
+          "duration" : 134
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "email",
+          "value" : "noezemlak1745438366118@yahoo.com"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Заполняем поле Пароль",
+        "time" : {
+          "start" : 1745438371679,
+          "stop" : 1745438371761,
+          "duration" : 82
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "password",
+          "value" : "^hu79FL^1d"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Кликаем на кнопку Войти",
+        "time" : {
+          "start" : 1745438371761,
+          "stop" : 1745438371839,
+          "duration" : 78
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Клик по элементу: By.xpath: .//button[text()='Войти']",
+          "time" : {
+            "start" : 1745438371761,
+            "stop" : 1745438371839,
+            "duration" : 78
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Ожидание видимости элемента: By.xpath: .//button[text()='Войти']",
+            "time" : {
+              "start" : 1745438371761,
+              "stop" : 1745438371785,
+              "duration" : 24
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "By.xpath: .//button[text()='Войти']"
+            } ],
+            "stepsCount" : 0,
+            "hasContent" : true,
+            "shouldDisplayMessage" : false,
+            "attachmentsCount" : 0
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "By.xpath: .//button[text()='Войти']"
+          } ],
+          "stepsCount" : 1,
+          "hasContent" : true,
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Проверка видимости элемента: By.xpath: //button[text()='Оформить заказ']",
+        "time" : {
+          "start" : 1745438371839,
+          "stop" : 1745438372396,
+          "duration" : 557
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "By.xpath: //button[text()='Оформить заказ']"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "user",
+        "value" : "User(email=noezemlak1745438366118@yahoo.com, password=^hu79FL^1d, name=Ylml Yipg, token=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDk0NjlkOWVkMjgwMDAxYjVkM2UxYSIsImlhdCI6MTc0NTQzODM2NSwiZXhwIjoxNzQ1NDM5NTY1fQ.S8E_2plw09hJzGnOSptbQQ44yhtYD0b_tlgWH27sNoo)"
+      } ],
+      "stepsCount" : 6,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Кнопка 'Оформить заказ'",
+      "time" : {
+        "start" : 1745438372401,
+        "stop" : 1745438372428,
+        "duration" : 27
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Проверка видимости элемента: By.xpath: .//button[text()='Оформить заказ']",
+        "time" : {
+          "start" : 1745438372401,
+          "stop" : 1745438372428,
+          "duration" : 27
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "By.xpath: .//button[text()='Оформить заказ']"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Удаление пользователя через API",
+      "time" : {
+        "start" : 1745438372428,
+        "stop" : 1745438373064,
+        "duration" : 636
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "token",
+        "value" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDk0NjlkOWVkMjgwMDAxYjVkM2UxYSIsImlhdCI6MTc0NTQzODM2NSwiZXhwIjoxNzQ1NDM5NTY1fQ.S8E_2plw09hJzGnOSptbQQ44yhtYD0b_tlgWH27sNoo"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 16,
+    "hasContent" : true,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.LoginTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "registerAccountButtonSuccess"
+  }, {
+    "name" : "suite",
+    "value" : "tests.LoginTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-UG3QINL"
+  }, {
+    "name" : "thread",
+    "value" : "15840@DESKTOP-UG3QINL.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "cc39bd58298c71b8.json",
+  "parameterValues" : [ ]
+}

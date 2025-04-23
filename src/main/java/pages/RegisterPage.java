@@ -1,4 +1,4 @@
-package pageObject;
+package pages;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
@@ -8,7 +8,6 @@ import utils.User;
 
 public class RegisterPage extends BasePage {
 
-    // Локаторы
     private final By userNameField = By.xpath(".//div/label[text()='Имя']/parent::div/input");
     private final By userEmailField = By.xpath(".//div/label[text()='Email']/parent::div/input");
     private final By userPasswordField = By.xpath(".//div/label[text()='Пароль']/parent::div/input");

@@ -1,0 +1,288 @@
+{
+  "uid" : "ad3bfbbd5581a34f",
+  "name" : "Негативная регистрация с коротким паролем",
+  "fullName" : "tests.RegisterTest.registerNewUserWithShortPasswordFail",
+  "historyId" : "cddc44bff456791c1effe7466a7641ae",
+  "time" : {
+    "start" : 1745438425512,
+    "stop" : 1745438429168,
+    "duration" : 3656
+  },
+  "description" : "Проверка отображения ошибки при попытке регистрации с паролем короче 6 символов",
+  "descriptionHtml" : "<p>Проверка отображения ошибки при попытке регистрации с паролем короче 6 символов</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Проверка отображения ошибки при попытке регистрации с паролем короче 6 символов",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Подготовка тестового пользователя через API",
+      "time" : {
+        "start" : 1745438426414,
+        "stop" : 1745438426908,
+        "duration" : 494
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Создание нового пользователя",
+        "time" : {
+          "start" : 1745438426414,
+          "stop" : 1745438426624,
+          "duration" : 210
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "user",
+          "value" : "User(email=raymondewuckert1745438426414@yahoo.com, password=#Ax7#3Im&0%, name=Zxhmx Lkjwl, token=null)"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Вход под пользователем",
+        "time" : {
+          "start" : 1745438426654,
+          "stop" : 1745438426890,
+          "duration" : 236
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "user",
+          "value" : "User(email=raymondewuckert1745438426414@yahoo.com, password=#Ax7#3Im&0%, name=Zxhmx Lkjwl, token=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDk0NmQ5OWVkMjgwMDAxYjVkM2U0ZCIsImlhdCI6MTc0NTQzODQyNSwiZXhwIjoxNzQ1NDM5NjI1fQ.gmlz_s9BZM_Fl7TJGH942u7rISH-DEI4EWXLqXu5Lp0)"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Открытие страницы регистрации",
+      "time" : {
+        "start" : 1745438426908,
+        "stop" : 1745438427937,
+        "duration" : 1029
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Заполнение формы регистрации",
+      "time" : {
+        "start" : 1745438427938,
+        "stop" : 1745438428239,
+        "duration" : 301
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Ожидание загрузки страницы регистрации",
+        "time" : {
+          "start" : 1745438427938,
+          "stop" : 1745438427961,
+          "duration" : 23
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Ожидание видимости элемента: By.xpath: .//button[text()='Зарегистрироваться']",
+          "time" : {
+            "start" : 1745438427938,
+            "stop" : 1745438427961,
+            "duration" : 23
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "By.xpath: .//button[text()='Зарегистрироваться']"
+          } ],
+          "stepsCount" : 0,
+          "hasContent" : true,
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Заполняем поле Имя",
+        "time" : {
+          "start" : 1745438427961,
+          "stop" : 1745438428071,
+          "duration" : 110
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "userName",
+          "value" : "Qucz Ttzhrk"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Заполняем поле Email",
+        "time" : {
+          "start" : 1745438428071,
+          "stop" : 1745438428175,
+          "duration" : 104
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "email",
+          "value" : "yasminemckenzie1745438427937@yahoo.com"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Заполняем поле Пароль",
+        "time" : {
+          "start" : 1745438428175,
+          "stop" : 1745438428239,
+          "duration" : 64
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "password",
+          "value" : "123"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "user",
+        "value" : "User(email=yasminemckenzie1745438427937@yahoo.com, password=123, name=Qucz Ttzhrk, token=null)"
+      } ],
+      "stepsCount" : 5,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Нажимаем кнопку Зарегистрироваться",
+      "time" : {
+        "start" : 1745438428239,
+        "stop" : 1745438428298,
+        "duration" : 59
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Получение сообщения об ошибке пароля",
+      "time" : {
+        "start" : 1745438428298,
+        "stop" : 1745438428322,
+        "duration" : 24
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Удаление пользователя через API",
+      "time" : {
+        "start" : 1745438428322,
+        "stop" : 1745438428963,
+        "duration" : 641
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "token",
+        "value" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDk0NmQ5OWVkMjgwMDAxYjVkM2U0ZCIsImlhdCI6MTc0NTQzODQyNSwiZXhwIjoxNzQ1NDM5NjI1fQ.gmlz_s9BZM_Fl7TJGH942u7rISH-DEI4EWXLqXu5Lp0"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 13,
+    "hasContent" : true,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.RegisterTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "registerNewUserWithShortPasswordFail"
+  }, {
+    "name" : "suite",
+    "value" : "tests.RegisterTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-UG3QINL"
+  }, {
+    "name" : "thread",
+    "value" : "15840@DESKTOP-UG3QINL.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ad3bfbbd5581a34f.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,342 @@
+{
+  "uid" : "9f69bf07a1f48200",
+  "name" : "Вход через кнопку в форме восстановления пароля",
+  "fullName" : "tests.LoginTest.registerRecoverPasswordPageSuccess",
+  "historyId" : "825b97e5450f4ce005885710783abdd4",
+  "time" : {
+    "start" : 1745438373274,
+    "stop" : 1745438377181,
+    "duration" : 3907
+  },
+  "description" : "Проверка перехода на страницу входа со страницы восстановления пароля и успешной авторизации",
+  "descriptionHtml" : "<p>Проверка перехода на страницу входа со страницы восстановления пароля и успешной авторизации</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Проверка перехода на страницу входа со страницы восстановления пароля и успешной авторизации",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Подготовка тестового пользователя через API",
+      "time" : {
+        "start" : 1745438374169,
+        "stop" : 1745438374693,
+        "duration" : 524
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Создание нового пользователя",
+        "time" : {
+          "start" : 1745438374169,
+          "stop" : 1745438374364,
+          "duration" : 195
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "user",
+          "value" : "User(email=ulysseshintz1745438374169@hotmail.com, password=F$Dx%6g%Nmw^q, name=Rxpzrxjzd Lqrjkn, token=null)"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Вход под пользователем",
+        "time" : {
+          "start" : 1745438374413,
+          "stop" : 1745438374667,
+          "duration" : 254
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "user",
+          "value" : "User(email=ulysseshintz1745438374169@hotmail.com, password=F$Dx%6g%Nmw^q, name=Rxpzrxjzd Lqrjkn, token=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDk0NmE1OWVkMjgwMDAxYjVkM2UxZSIsImlhdCI6MTc0NTQzODM3MywiZXhwIjoxNzQ1NDM5NTczfQ.Prx5B_iwwhS-RO6NYVqG-RmcUTzvwYR7JJrGJ27A3HY)"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Клик по ссылке Войти",
+      "time" : {
+        "start" : 1745438375330,
+        "stop" : 1745438375563,
+        "duration" : 233
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Ожидание загрузки страницы восстановления пароля",
+        "time" : {
+          "start" : 1745438375330,
+          "stop" : 1745438375355,
+          "duration" : 25
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "hasContent" : false,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Вход через форму логина",
+      "time" : {
+        "start" : 1745438375563,
+        "stop" : 1745438376385,
+        "duration" : 822
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Заполняем поле Email",
+        "time" : {
+          "start" : 1745438375564,
+          "stop" : 1745438375683,
+          "duration" : 119
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "email",
+          "value" : "ulysseshintz1745438374169@hotmail.com"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Заполняем поле Пароль",
+        "time" : {
+          "start" : 1745438375683,
+          "stop" : 1745438375762,
+          "duration" : 79
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "password",
+          "value" : "F$Dx%6g%Nmw^q"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Кликаем на кнопку Войти",
+        "time" : {
+          "start" : 1745438375762,
+          "stop" : 1745438375839,
+          "duration" : 77
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Клик по элементу: By.xpath: .//button[text()='Войти']",
+          "time" : {
+            "start" : 1745438375763,
+            "stop" : 1745438375839,
+            "duration" : 76
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Ожидание видимости элемента: By.xpath: .//button[text()='Войти']",
+            "time" : {
+              "start" : 1745438375763,
+              "stop" : 1745438375784,
+              "duration" : 21
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "By.xpath: .//button[text()='Войти']"
+            } ],
+            "stepsCount" : 0,
+            "hasContent" : true,
+            "shouldDisplayMessage" : false,
+            "attachmentsCount" : 0
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "By.xpath: .//button[text()='Войти']"
+          } ],
+          "stepsCount" : 1,
+          "hasContent" : true,
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "Проверка видимости элемента: By.xpath: //button[text()='Оформить заказ']",
+        "time" : {
+          "start" : 1745438375839,
+          "stop" : 1745438376385,
+          "duration" : 546
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "By.xpath: //button[text()='Оформить заказ']"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "user",
+        "value" : "User(email=ulysseshintz1745438374169@hotmail.com, password=F$Dx%6g%Nmw^q, name=Rxpzrxjzd Lqrjkn, token=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDk0NmE1OWVkMjgwMDAxYjVkM2UxZSIsImlhdCI6MTc0NTQzODM3MywiZXhwIjoxNzQ1NDM5NTczfQ.Prx5B_iwwhS-RO6NYVqG-RmcUTzvwYR7JJrGJ27A3HY)"
+      } ],
+      "stepsCount" : 6,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Ожидание URL: https://stellarburgers.nomoreparties.site/",
+      "time" : {
+        "start" : 1745438376386,
+        "stop" : 1745438376391,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "expectedUrl",
+        "value" : "https://stellarburgers.nomoreparties.site/"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Кнопка 'Оформить заказ'",
+      "time" : {
+        "start" : 1745438376391,
+        "stop" : 1745438376418,
+        "duration" : 27
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Проверка видимости элемента: By.xpath: .//button[text()='Оформить заказ']",
+        "time" : {
+          "start" : 1745438376391,
+          "stop" : 1745438376418,
+          "duration" : 27
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "By.xpath: .//button[text()='Оформить заказ']"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Удаление пользователя через API",
+      "time" : {
+        "start" : 1745438376418,
+        "stop" : 1745438377012,
+        "duration" : 594
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "token",
+        "value" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDk0NmE1OWVkMjgwMDAxYjVkM2UxZSIsImlhdCI6MTc0NTQzODM3MywiZXhwIjoxNzQ1NDM5NTczfQ.Prx5B_iwwhS-RO6NYVqG-RmcUTzvwYR7JJrGJ27A3HY"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 16,
+    "hasContent" : true,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.LoginTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "registerRecoverPasswordPageSuccess"
+  }, {
+    "name" : "suite",
+    "value" : "tests.LoginTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-UG3QINL"
+  }, {
+    "name" : "thread",
+    "value" : "15840@DESKTOP-UG3QINL.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9f69bf07a1f48200.json",
+  "parameterValues" : [ ]
+}

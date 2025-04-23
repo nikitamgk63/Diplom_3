@@ -2,10 +2,11 @@ package tests;
 
 import config.Constants;
 import io.qameta.allure.junit4.DisplayName;
+import io.qameta.allure.Description;
 import org.junit.Test;
-import pageObject.LoginPage;
-import pageObject.MainPage;
-import pageObject.ProfilePage;
+import pages.LoginPage;
+import pages.MainPage;
+import pages.ProfilePage;
 import static config.Constants.MAIN_PAGE_URL;
 import static config.Constants.PROFILE_PAGE_URL;
 import static org.junit.Assert.assertEquals;
@@ -15,6 +16,7 @@ public class ProfileTest extends BaseTest {
 
     @Test
     @DisplayName("Переход в Профиль")
+    @Description("Проверка успешного перехода в личный кабинет после авторизации")
     public void clickAccountLinkSuccess() {
         // Открываем главную страницу
         driver.get(MAIN_PAGE_URL);
@@ -42,6 +44,7 @@ public class ProfileTest extends BaseTest {
 
     @Test
     @DisplayName("Переход из личного кабинета в конструктор")
+    @Description("Проверка возврата в конструктор бургеров из личного кабинета")
     public void registerAccountButtonSuccess() {
         // Открываем главную страницу
         driver.get(MAIN_PAGE_URL);
@@ -67,6 +70,7 @@ public class ProfileTest extends BaseTest {
 
     @Test
     @DisplayName("Переход из личного кабинета на главную страницу по клику на логотип Stellar Burgers")
+    @Description("Проверка возврата на главную страницу через клик по логотипу из личного кабинета")
     public void clickLogoGetMainPage() {
         driver.get(MAIN_PAGE_URL);
         MainPage mainPage = new MainPage(driver);

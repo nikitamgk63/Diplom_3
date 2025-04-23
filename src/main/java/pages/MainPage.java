@@ -1,9 +1,10 @@
-package pageObject;
+package pages;
 
 import config.Constants;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import static config.Constants.MAIN_PAGE_URL;
 
@@ -17,6 +18,10 @@ public class MainPage extends BasePage {
     private final By bunsHeader = By.xpath("//h2[text()='Булки']");
     private final By saucesHeader = By.xpath("//h2[text()='Соусы']");
     private final By fillingsHeader = By.xpath("//h2[text()='Начинки']");
+    private final By constructorHeader = By.xpath(".//h1[text()='Соберите бургер']");
+    private final By activeTab = By.xpath("//div[contains(@class, 'tab_tab_type_current__2BEPc')]");
+    private final By bunsButton = By.xpath("//span[text()='Булки']/parent::div");
+
     public MainPage(WebDriver driver) {
         super(driver);
     }
@@ -47,8 +52,13 @@ public class MainPage extends BasePage {
 
     @Step("Ожидание отображения заголовка конструктора")
     public boolean waitConstructorHeader() {
-        By constructorHeader = By.xpath(".//h1[text()='Соберите бургер']");
         return isElementDisplayed(constructorHeader);
+    }
+
+    @Step("Клик на раздел 'Булки'")
+    public void clickBunsSection() {
+        waitForElement(bunsButton);
+        clickElement(bunsButton);
     }
 
     @Step("Клик на раздел 'Соусы'")
@@ -81,5 +91,23 @@ public class MainPage extends BasePage {
     @Step("Проверка отображения заголовка 'Начинки'")
     public boolean isFillingsHeaderDisplayed() {
         return isElementDisplayed(fillingsHeader);
+    }
+
+    @Step("Проверить, что активен раздел 'Булки'")
+    public boolean isBunsTabActive() {
+        WebElement activeTabElement = driver.findElement(activeTab);
+        return activeTabElement.findElement(By.xpath(".//span")).getText().equals("Булки");
+    }
+
+    @Step("Проверить, что активен раздел 'Соусы'")
+    public boolean isSaucesTabActive() {
+        WebElement activeTabElement = driver.findElement(activeTab);
+        return activeTabElement.findElement(By.xpath(".//span")).getText().equals("Соусы");
+    }
+
+    @Step("Проверить, что активен раздел 'Начинки'")
+    public boolean isFillingsTabActive() {
+        WebElement activeTabElement = driver.findElement(activeTab);
+        return activeTabElement.findElement(By.xpath(".//span")).getText().equals("Начинки");
     }
 }

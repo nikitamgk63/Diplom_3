@@ -1,4 +1,4 @@
-package pageObject;
+package pages;
 
 import config.Constants;
 import io.qameta.allure.Step;
@@ -11,12 +11,13 @@ import java.time.Duration;
 
 public class ForgotPasswordPage extends BasePage {
 
+    private final By loginLink = By.xpath(".//a[text()='Войти']");
+    private final By recoverPasswordButton = By.xpath(".//button[text()= 'Восстановить']");
+
     public ForgotPasswordPage(WebDriver driver) {
         super(driver);
     }
 
-    private final By loginLink = By.xpath(".//a[text()='Войти']");
-    private final By recoverPasswordButton = By.xpath(".//button[text()= 'Восстановить']");
 
     public void waitForElement(By locator) {
         new WebDriverWait(driver, Duration.ofSeconds(Constants.DEFAULT_TIMEOUT))

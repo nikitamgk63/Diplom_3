@@ -2,14 +2,10 @@ package utils;
 
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
-
-import java.util.Random;
+import net.datafaker.Faker;
 
 public class UserGenerator {
-    private static final String EMAIL_DOMAIN = "@example.com";
-    private static final int PASSWORD_MIN_LENGTH = 6;
-    private static final int PASSWORD_MAX_LENGTH = 16;
-    private static final Random RANDOM = new Random();
+    private static final Faker faker = new Faker();
 
     // Генерация пользователя с рандомными валидными данными и регистрация через API
     public static User createRandomUserThroughAPI(UserClient userClient) {
@@ -21,6 +17,10 @@ public class UserGenerator {
             throw new AssertionError("Не удалось создать пользователя через API. Статус: " + response.statusCode());
         }
 
+        // Добавляем токен к пользователю
+        String token = response.jsonPath().getString("accessToken");
+        user.setToken(token);
+
         return user;
     }
 
@@ -28,32 +28,36 @@ public class UserGenerator {
         return generateRandomUser();
     }
 
-
     // Генерация пользователя с уникальными email, паролем и именем
     private static User generateRandomUser() {
-        String email = "user" + System.currentTimeMillis() + RANDOM.nextInt(1000) + EMAIL_DOMAIN;
-        String password = generateRandomPassword();
-        String name = "User" + RANDOM.nextInt(10000);
-
         return User.builder()
-                .email(email)
-                .password(password)
-                .name(name)
+                .email(generateUniqueEmail())
+                .password(generateSecurePassword())
+                .name(generateValidName())
                 .build();
     }
 
-    // Генерация случайного пароля заданной длины
-    private static String generateRandomPassword() {
-        int length = RANDOM.nextInt(PASSWORD_MAX_LENGTH - PASSWORD_MIN_LENGTH + 1) + PASSWORD_MIN_LENGTH;
-        String password = RANDOM.ints(length, 33, 122)
-                .filter(i -> Character.isLetterOrDigit(i) || "!@#$%^&*()".indexOf((char) i) >= 0)
-                .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
-                .toString();
+    // Генерация безопасного пароля
+    private static String generateSecurePassword() {
+        return faker.internet().password(10, 16, true, true, true);
+    }
 
-        // Убедимся, что пароль содержит буквы, цифры и спецсимволы
-        if (!password.matches(".*[A-Za-z].*") || !password.matches(".*\\d.*") || !password.matches(".*[!@#$%^&*()].*")) {
-            return generateRandomPassword(); // Рекурсивно сгенерируем новый
-        }
-        return password;
+    // Генерация уникального email
+    private static String generateUniqueEmail() {
+        return faker.internet().emailAddress(faker.name().username().replace(".", "") + System.currentTimeMillis());
+    }
+
+    // Генерация валидного имени
+    private static String generateValidName() {
+        return faker.regexify("[A-Z][a-z]{3,8} [A-Z][a-z]{3,8}");
+    }
+
+    // Генерация пользователя с коротким паролем (для негативных тестов)
+    public static User getUserWithShortPassword() {
+        return User.builder()
+                .email(generateUniqueEmail())
+                .password("123") // Специально короткий пароль
+                .name(generateValidName())
+                .build();
     }
 }

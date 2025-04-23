@@ -1,4 +1,4 @@
-package pageObject;
+package pages;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
@@ -7,13 +7,15 @@ import org.openqa.selenium.WebElement;
 import utils.User;
 
 public class LoginPage extends BasePage {
-    public LoginPage(WebDriver driver) {
-        super(driver);
-    }
 
     private final By userEmailField = By.xpath(".//div/label[text()='Email']/parent::div/input");
     private final By userPasswordField = By.xpath(".//div/label[text()='Пароль']/parent::div/input");
     private final By enterButton = By.xpath(".//button[text()='Войти']");
+    private final By orderButton = By.xpath("//button[text()='Оформить заказ']");
+
+    public LoginPage(WebDriver driver) {
+        super(driver);
+    }
 
     @Step("Ожидаем загрузку страницы авторизации")
     public void waitLoginPage() {
@@ -53,7 +55,7 @@ public class LoginPage extends BasePage {
         setUserPassword(user.getPassword());
         clickEnterButton();
 
-        if (!isElementDisplayed(By.xpath("//button[text()='Оформить заказ']"))) {
+        if (!isElementDisplayed(orderButton)) {
             throw new AssertionError("Пользователь не был успешно авторизован.");
         }
     }
