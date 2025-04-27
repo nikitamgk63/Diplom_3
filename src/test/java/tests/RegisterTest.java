@@ -9,6 +9,7 @@ import pages.RegisterPage;
 import utils.UserGenerator;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 public class RegisterTest extends BaseTest {
     private RegisterPage registerPage;
@@ -33,6 +34,9 @@ public class RegisterTest extends BaseTest {
                         "Пароль: " + user.getPassword());
         // Регистрация через UI
         registerPage.performRegistration(user);
+        // UI проверка редиректа на страницу входа
+        assertTrue("После регистрации не произошел редирект на страницу входа",
+                registerPage.isRegistrationSuccessful());
         // Проверка авторизации через API
         userToken = userClient.login(user)
                 .then()
@@ -48,11 +52,9 @@ public class RegisterTest extends BaseTest {
     public void registerNewUserWithShortPasswordFail() {
         // Генерация пользователя с коротким паролем
         user = UserGenerator.getUserWithShortPassword();
-
         // Регистрация
         registerPage.fillRegistrationForm(user);
         registerPage.clickRegisterButton();
-
         // Проверка сообщения об ошибке
         assertEquals("Некорректный пароль", registerPage.getIncorrectPasswordMessageText());
     }

@@ -2,11 +2,18 @@ package pages;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.User;
 
+import java.time.Duration;
+
 public class RegisterPage extends BasePage {
+
+    private final WebDriverWait wait;
 
     private final By userNameField = By.xpath(".//div/label[text()='Имя']/parent::div/input");
     private final By userEmailField = By.xpath(".//div/label[text()='Email']/parent::div/input");
@@ -14,9 +21,11 @@ public class RegisterPage extends BasePage {
     private final By registerButton = By.xpath(".//button[text()='Зарегистрироваться']");
     private final By incorrectPasswordMessage = By.xpath("//p[text()='Некорректный пароль']");
     private final By loginLink = By.xpath(".//a[text()='Войти']");
+    private final By loginButton = By.xpath("//button[text()='Войти']");
 
     public RegisterPage(WebDriver driver) {
         super(driver);
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     @Step("Открытие страницы регистрации")
@@ -80,5 +89,15 @@ public class RegisterPage extends BasePage {
         WebElement link = driver.findElement(loginLink);
         link.click();
         return new LoginPage(driver);
+    }
+
+    @Step("Проверка успешной регистрации")
+    public boolean isRegistrationSuccessful() {
+        try {
+            return wait.until(ExpectedConditions.urlContains("/login")) &&
+                    isElementDisplayed(loginButton);
+        } catch (TimeoutException e) {
+            return false;
+        }
     }
 }
